@@ -5,7 +5,7 @@ node{
    stage('Compile-Package'){
       // Get maven home path
       def mvnHome =  tool name: 'Maven', type: 'maven'
-      sh "${mvnHome}/opt/maven/apache-maven-3.6.0 package"
+      sh "${mvnHome}/opt/maven/apache-maven-3.6.0"
    }
    
 }
