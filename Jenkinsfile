@@ -4,7 +4,7 @@ node{
    }
    stage('Compile-Package'){
      def mvnHome = tool name: 'Maven', type: 'maven'
-     def mvnCMD = "${mvnHome]/opt/maven/apache-maven-3.6.0/bin/mvn"
+      def mvnCMD = "${mvnHome}/opt/maven/apache-maven-3.6.0/bin/mvn"
      sh "${mvnCMD} clean package"
 
    }
