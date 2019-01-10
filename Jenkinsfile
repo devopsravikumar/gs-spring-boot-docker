@@ -1,6 +1,6 @@
 node{
    stage('SCM Checkout'){
-     git 'https://github.com/devopsravikumar/gs-spring-boot-docker/tree/master/complete'
+     git 'https://github.com/devopsravikumar/gs-spring-boot-docker.git'
    }
    stage('Compile-Package'){
       // Get maven home path
