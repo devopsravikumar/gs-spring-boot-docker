@@ -3,7 +3,9 @@ node{
      git 'https://github.com/devopsravikumar/gs-spring-boot-docker.git'
    }
    stage('Compile-Package'){
-    sh 'mvn package'
+     def mvnHome = tool name: 'Maven', type: 'maven'
+     def mvnCMD = "${mvnHome]/bin/mvn"
+     sh "${mvnCMD} clean package"
    }
    
 }
