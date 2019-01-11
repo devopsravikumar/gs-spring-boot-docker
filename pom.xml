@@ -38,7 +38,20 @@
                 </configuration>
             </plugin>
            
-
+    <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <configuration>
+            <mainClass>myPackage.HelloWorld</mainClass> 
+        </configuration>
+    </plugin>
+    <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+            <fork>true</fork>
+            <executable>D:\jdk1.8\bin\javaw.exe</executable>
+        </configuration>
+    </plugin>
            
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -64,6 +77,7 @@
             </plugin>
             
         </plugins>
+        
     </build>
 
     <dependencies>
