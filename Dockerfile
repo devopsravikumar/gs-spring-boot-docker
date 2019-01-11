@@ -5,4 +5,5 @@ ARG DEPENDENCY=target/dependency
 COPY ${DEPENDENCY}/BOOT-INF/lib /app/lib
 COPY ${DEPENDENCY}/META-INF /app/META-INF
 ENTRYPOINT ["java","-cp","app:app/lib/*","hello.Application"]
+COPY ./${JAR_FILE} app.jar
 COPY ${DEPENDENCY}/BOOT-INF/classes /app
