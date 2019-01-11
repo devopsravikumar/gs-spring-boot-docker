@@ -6,78 +6,16 @@
     <groupId>org.springframework</groupId>
     <artifactId>gs-spring-boot-docker</artifactId>
     <version>0.1.0</version>
-    <packaging>jar</packaging>
-    <name>Spring Boot Docker</name>
-    <description>Getting started with Spring Boot and Docker</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.0.5.RELEASE</version>
-        <relativePath />
     </parent>
 
     <properties>
-        <docker.image.prefix>springio</docker.image.prefix>
         <java.version>1.8</java.version>
     </properties>
-    
-    <profiles>
-    <profile>
-        <id>profile1</id>
-        <properties>
-            <spring.boot.mainclass>com.detaysoft.Application</spring.boot.mainclass>
-        </properties>
-    </profile>
-</profiles>
-    
-    <build>
-    <plugins>
-        <plugin>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-maven-plugin</artifactId>
-            <executions>
-                <execution>
-                    <goals>
-                        <goal>repackage</goal>
-                    </goals>
-                    <configuration>
-                        <mainClass>${spring.boot.mainclass}</mainClass>
-                    </configuration>
-                </execution>
-            </executions>
-        </plugin>
-    </plugins>
-</build>
-    
-            <!-- end::plugin[] -->
-
-            <!-- tag::unpack[] -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-dependency-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>unpack</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>unpack</goal>
-                        </goals>
-                        <configuration>
-                            <artifactItems>
-                                <artifactItem>
-                                    <groupId>${project.groupId}</groupId>
-                                    <artifactId>${project.artifactId}</artifactId>
-                                    <version>${project.version}</version>
-                                </artifactItem>
-                            </artifactItems>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-            <!-- end::unpack[] -->
-        </plugins>
-    </build>
 
     <dependencies>
         <dependency>
@@ -90,5 +28,15 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
