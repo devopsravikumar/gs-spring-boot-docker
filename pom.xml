@@ -28,7 +28,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
-            <!-- tag::plugin[] -->
+           
             <plugin>
                 <groupId>com.spotify</groupId>
                 <artifactId>dockerfile-maven-plugin</artifactId>
@@ -37,9 +37,9 @@
                     <repository>${docker.image.prefix}/${project.artifactId}</repository>
                 </configuration>
             </plugin>
-            <!-- end::plugin[] -->
+           
 
-            <!-- tag::unpack[] -->
+           
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
